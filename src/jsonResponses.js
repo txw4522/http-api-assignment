@@ -1,5 +1,4 @@
-// Note this object is purely in memory
-const users = {};
+
 
 // SENDS BACK FULL RESPONSES FOR GET REQUESTS
 const respondJSON = (request, response, status, object) => {
@@ -32,7 +31,7 @@ const successJSON = (request, response) => {
   return respondJSON(request, response, 200, responseJSON);
 };
 
-const successXML = (request, response) => {
+const successXML = () => {
   var xmlHTTP = new XMLHttpRequest();
   xmlHTTP.open("POST","response");
   var xml = "<?xml version'1.0'?><message>This is a successful response</message></query>";
@@ -47,7 +46,7 @@ const badRequestJSON = (request, response) => {
   return respondJSON(request, response, 400, responseJSON);
 };
 
-const badRequestXML = (request, response) => {
+const badRequestXML = () => {
 
 };
 
@@ -59,7 +58,7 @@ const unauthorizedJSON = (request, response) => {
   return respondJSON(request, response, 401, responseJSON);
 };
 
-const unauthorizedXML = (request, response) => {
+const unauthorizedXML = () => {
 
 };
 
@@ -71,7 +70,7 @@ const fordbiddenJSON = (request, response) => {
   return respondJSON(request, response, 403, responseJSON);
 };
 
-const forbiddenXML = (request, response) => {
+const forbiddenXML = () => {
 
 };
 
@@ -83,7 +82,7 @@ const internalJSON = (request, response) => {
   return respondJSON(request, response, 500, responseJSON);
 };
 
-const internalXML = (request, response) => {
+const internalXML = () => {
   
 };
 
@@ -95,7 +94,7 @@ const notImplementedJSON = (request, response) => {
   return respondJSON(request, response, 501, responseJSON);
 };
 
-const notImplementedXML = (request, response) => {
+const notImplementedXML = () => {
 
 };
 // SEND BACK 404
